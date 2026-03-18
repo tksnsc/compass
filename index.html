@@ -1,38 +1,38 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>方位磁針</title>
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: #f0f0f0;
-    }
+<meta charset="UTF-8">
+<title>方位磁針</title>
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f0f0f0;
+  }
 
-    #compass {
-      width: 200px;
-      height: 200px;
-      transition: transform 0.5s ease;
-      cursor: pointer;
-    }
-  </style>
+  #compass {
+    width: 200px;
+    transition: transform 0.5s;
+    cursor: pointer;
+  }
+</style>
 </head>
+
 <body>
 
-<img src="https://as2.ftcdn.net/jpg/16/92/65/31/1000_F_1692653146_vZYlScr5DTV2w384KhcBHSjGV8R3oU2e.jpg">
+<img id="compass" src="https://aiwo-komete.com/wp-content/uploads/2023/06/compass-300x300.png">
 
 <script>
-  const compass = document.getElementById("compass");
-  let rotated = false;
+const compass = document.getElementById("compass");
+let rotated = false;
 
-  compass.addEventListener("click", () => {
-    rotated = !rotated;
-    compass.style.transform = rotated ? "rotate(180deg)" : "rotate(0deg)";
-  });
+compass.addEventListener("click", () => {
+  rotated = !rotated;
+  compass.style.transform = rotated ? "rotate(180deg)" : "rotate(0deg)";
+});
 </script>
 
 </body>
