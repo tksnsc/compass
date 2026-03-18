@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>方位磁針</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #f0f0f0;
+    }
+
+    #compass {
+      width: 200px;
+      height: 200px;
+      transition: transform 0.5s ease;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<img id="compass" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Compass_rose_pale.svg/512px-Compass_rose_pale.svg.png">
+
+<script>
+  const compass = document.getElementById("compass");
+  let rotated = false;
+
+  compass.addEventListener("click", () => {
+    rotated = !rotated;
+    compass.style.transform = rotated ? "rotate(180deg)" : "rotate(0deg)";
+  });
+</script>
+
+</body>
+</html>
